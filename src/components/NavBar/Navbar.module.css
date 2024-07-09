@@ -1,0 +1,100 @@
+@import "../../vars.css";
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 61px;
+    z-index: 2;
+    margin: 0 10%;
+    text-decoration: none;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menuItems {
+    display: flex;
+    position: relative;
+    gap: 47px;
+    list-style: none;
+    align-items: center;
+    width: 30%;
+}
+
+
+.menuItems a::after {
+    content: '';
+    background: var(--color-light);
+    width: 0;
+    left: 0;
+    opacity: 0;
+    height: 3px;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    transition: all 0.2s;
+}
+
+.menuItems a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+.menuItems a{
+    text-decoration: none;
+    font-family: 'Fira Code', sans-serif;
+    color: var(--color-text);
+    font-size: 24px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.menuBtn {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 865px) {
+    .menuItems {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 10px auto;
+        gap: 13px;
+        border-radius: 10px;
+        background: rgb(17,21,28);
+        background: linear-gradient(0deg, rgba(33,45,64,1) 0%, rgba(33,45,64,1) 100%);
+        padding: 30px 33px;
+    }
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .menu {
+        position: static;
+        display: flex;
+    }
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+        
+    }
+    .menuOpen {
+        display: flex;
+    }
+
+}
+
