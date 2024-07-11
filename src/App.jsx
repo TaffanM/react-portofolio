@@ -2,6 +2,7 @@
 import styles from './App.module.css'
 import { Navbar } from './components/NavBar/Navbar'
 import { Profile } from './components/profile/Profile'
+import { About } from './components/About/About'
 import '@fontsource-variable/fira-code'
 
 function App() {
@@ -13,6 +14,10 @@ function App() {
       <Profile>
 
       </Profile>
+
+      <About>
+        
+      </About>
     </div>
   )
 }
